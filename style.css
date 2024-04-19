@@ -91,7 +91,7 @@ nav ul li{
   text-transform: uppercase;
   margin:20px 0px;
   transform: translateX(-100%);
-  transition: transfrom .4s ease-in;
+  transition: transform .4s linear;
 }
 nav ul li i{
   font-size: 10px;
@@ -109,5 +109,5 @@ nav ul li + li +li{
 
 .container.rotate + nav li {
   transform:translateX(0) ;
-  transition-delay: .3s;
+  transition-delay: .4s ease;
 }
