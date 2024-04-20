@@ -1,0 +1,113 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: content-box;
+}
+body{
+  overflow-x: hidden;
+  background-color: #333;
+}
+.container{
+  background: #fff;
+  min-height: 100vh;
+  color:#333;
+  padding:50px;
+  transform-origin: top left;
+  transition: transform .5s linear;
+}
+.rotate{
+  transform: rotate(-20deg);
+}
+
+.cercle-container{
+ position:fixed;
+  top:-100px;
+  left: -100px;
+}
+.cercle{
+  position: relative;
+  background-color: #f05e3d;
+  width: 200px;
+  height: 200px; 
+  border-radius: 50%;
+  transition: transfrom .5s linear;
+}
+.cercle button{
+  position:absolute;
+  color:#fff;
+  cursor: pointer;
+  top:50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  font-size: 26px;
+  outline: none;
+  border: none;
+}
+
+.cercle button#open{
+  left:60%;
+}
+.cercle button#close{
+  top:60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+.container.rotate .cercle{
+  transform: rotate(-70deg);
+}
+.content{
+  width: 100%;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+.content {
+  font-weight: 500;
+}
+.content small{
+  color:#555;
+  font-style: italic;
+  padding-top: 20px;
+}
+.content p{
+  padding:20px 0px;
+}
+.content h3{
+  padding:20px 0px;
+}
+.content img{
+  max-width: 100%;
+}
+
+nav{
+  position: fixed;
+  bottom: 40px;
+  color:#fff;
+}
+nav ul{
+  list-style: none;
+}
+nav ul li{
+  text-transform: uppercase;
+  margin:20px 0px;
+  transform: translateX(-100%);
+  transition: transfrom .4s ease-in;
+}
+nav ul li i{
+  font-size: 10px;
+  margin-left: 40px;
+  letter-spacing: 2px;
+}
+nav ul li + li {
+  margin-left: 15px;
+  transform: translateX(-150%);
+}
+nav ul li + li +li{
+  margin-left: 30px;
+  transform: translateX(-200%);
+}
+
+.container.rotate + nav li {
+  transform:translateX(0) ;
+  transition-delay: .3s;
+}
